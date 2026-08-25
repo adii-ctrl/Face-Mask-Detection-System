@@ -4,3 +4,4 @@ __pycache__/
 archive/
 archive.zip
 dataset/
+face_mask_model.keras
