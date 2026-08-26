@@ -1,5 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
+import matplotlib.pyplot as plt
 
 # Image settings
 IMAGE_SIZE = 128
@@ -78,3 +79,32 @@ history = model.fit(
 model.save("face_mask_model.keras")
 
 print("Model training complete!")
+
+# Plot training and validation accuracy
+plt.figure(figsize=(8, 5))
+
+plt.plot(history.history["accuracy"], label="Training Accuracy")
+plt.plot(history.history["val_accuracy"], label="Validation Accuracy")
+
+plt.title("Training vs Validation Accuracy")
+plt.xlabel("Epoch")
+plt.ylabel("Accuracy")
+plt.legend()
+
+plt.savefig("accuracy_graph.png")
+plt.show()
+
+
+# Plot training and validation loss
+plt.figure(figsize=(8, 5))
+
+plt.plot(history.history["loss"], label="Training Loss")
+plt.plot(history.history["val_loss"], label="Validation Loss")
+
+plt.title("Training vs Validation Loss")
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.legend()
+
+plt.savefig("loss_graph.png")
+plt.show()
