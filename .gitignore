@@ -4,4 +4,9 @@ __pycache__/
 archive/
 archive.zip
 dataset/
-face_mask_model.keras
+face_mask_model.kerasregistered_faces/
+face_mask_model_backup.keras
+detection_backup.py
+requirements-before-recognition.txt
+rebase-merge-backup/
+tatusgit status
